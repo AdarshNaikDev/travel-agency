@@ -1,0 +1,53 @@
+import React, { Fragment, useState } from "react";
+import './Navbar.css';
+import travelLogo from '../../src/Assets/logo.png';
+import { FiPhoneCall } from "react-icons/fi";
+import { MdMenuOpen } from "react-icons/md";
+import {AiOutlineClose} from "react-icons/ai";
+
+const Navbar = () => {
+
+    const[showMobNavigation , setShowMobNavigation] = useState(false);
+
+    return (
+        <Fragment>
+          
+            <nav className={showMobNavigation? "no-header":"header"}>
+                <div className="top-left">
+                    <img className="header-logo" src={travelLogo} alt="travel logo" />
+                </div>
+                <div className="top-center">
+                    <ul className="navigation-items">
+                        <li>Home</li>
+                        <li>Packages</li>
+                        <li>About Us</li>
+                        <li>Contact Us</li>
+                    </ul>
+                </div>
+                <div className="top-right">
+                    <FiPhoneCall />
+                    <span>+91 9812341230</span>
+                </div>
+                <MdMenuOpen onClick={()=>setShowMobNavigation(!showMobNavigation)} size={25} className="hamburger-menu" />
+            </nav>
+            {/* for mobile screen navigation users */}
+
+            
+            <div className={showMobNavigation? "mobile-nav-bar":"no-mobile-nav-bar"}>
+            <AiOutlineClose onClick={()=>setShowMobNavigation(!showMobNavigation)} size={25} className="m-hamburger-menu" />
+            <ul className="m-navigation-items">
+                    <li>Home</li>
+                    <li>Packages</li>
+                    <li>About Us</li>
+                    <li>Contact Us</li>
+            </ul>
+            </div>
+          
+            
+        
+ 
+        </Fragment>
+    )
+}
+
+export default Navbar;

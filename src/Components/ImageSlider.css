@@ -1,0 +1,93 @@
+.image-container {
+    width: 1250px;
+    height: 650px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    margin: 0 auto;
+    margin-top: 100px;
+    border-radius: 10px;
+
+}
+
+.img-car {
+    width: 1250px;
+    height: 650px;
+    object-fit: cover;
+    border-radius: 10px;
+    opacity: 0.8;
+}
+
+.left-arrow {
+    color: white;
+    position: absolute;
+    z-index: 1;
+    left: 30px;
+    cursor: pointer;
+}
+
+.right-arrow {
+    color: white;
+    position: absolute;
+    z-index: 1;
+    right: 30px;
+    cursor: pointer;
+}
+
+.dot-design {
+    cursor: pointer;
+    font-size: 70px;
+    position: relative;
+    left: 47.5%;
+    bottom: 70px;
+    color: rgb(121, 118, 118);
+    padding-right: 5px;
+}
+
+
+.active-dot {
+    color: black;
+    font-size: 90px;
+}
+
+.search-div {
+    position: absolute;
+    top:-30px;
+    width: 616px;
+    height: 66px;
+    background: #FFFFFFFF;
+    border-radius: 38px;
+    box-shadow: 0px 17px 35px #171a1f, 0px 0px 2px #171a1f;
+    z-index: 2;
+}
+.search-bar{
+    z-index:3;
+    border: none;
+    outline: none;
+    background: none;
+    width: 516px;
+    height: 46px;   
+    position: absolute;
+    top: 7px;
+    left: 40px;
+    color: rgb(119, 115, 115);
+    font-size: 20px;
+}
+.search-bar::placeholder{
+    color: darkgray;
+    font-size: 17px;
+}
+
+.circle-btn{
+    position: absolute;
+    background-color: #279EFF;
+    border: none;
+    border-radius: 25px;
+    height: 50px;
+    width: 50px;
+    z-index: 4;
+    right: 7px;
+    top: 7px;
+}
