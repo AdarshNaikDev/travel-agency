@@ -1,11 +1,12 @@
 
 import './App.css';
-import Home from './Pages/Home';
+import AdminLogin from './Pages/AdminLogin';
+
 function App() {
   return (
     <>
-    <Home/>
     
+    <AdminLogin/>
     </>
   );
 }
