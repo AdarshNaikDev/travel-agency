@@ -1,0 +1,43 @@
+.background-img-container{
+    background-image: url('/public/adminHome.png');
+    /* background-color: aquamarine; */
+    width: 100%;
+    height: 645px;
+    background-size: 100% ;
+    object-fit: cover;
+    position: relative;
+    margin: 0;
+    padding: 0;
+
+}
+
+.btn-div{
+    width: 100%;
+    height: 645px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+   
+}
+
+.btn {
+    width: 300px;
+    margin-top: 20px;
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius:4px;
+    background-color: #179FBDFF;
+    color: #fff;
+    letter-spacing: 1px;
+    cursor: pointer;
+    padding: 15px 0px 15px 0px;
+    margin-bottom: 20px;
+    
+
+}
+
+.btn:hover{
+    background-color: rgb(35, 140, 163); 
+}

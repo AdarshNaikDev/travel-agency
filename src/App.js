@@ -1,12 +1,14 @@
 
 import './App.css';
-import AdminLogin from './Pages/AdminLogin';
+import LoginHeader from './Components/LoginHeader';
+import AdminHome from './Pages/AdminHome';
+
 
 function App() {
   return (
     <>
-    
-    <AdminLogin/>
+    <LoginHeader/>
+    <AdminHome/>
     </>
   );
 }
