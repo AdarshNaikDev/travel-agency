@@ -16,7 +16,7 @@ function PackagesCardSet() {
   ];
   return (
     <>
-    <div style={{marginTop:"40px", marginBottom:"20px"}} className='card-grid'>
+    <div style={{marginTop:"40px", marginBottom:"20px"}} className='cardd-grid'>
     {dataFromAPI.map((card) => (
         <CardComponent key={card.id} location = {card.location} img={card.img} originalPrice={card.originalPrice} discountPrice={card.discountPrice}/>
       ))}

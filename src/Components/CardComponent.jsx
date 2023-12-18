@@ -4,9 +4,9 @@ import { CiLocationOn } from "react-icons/ci";
 const CardComponent = (props) => {
   console.log(props.location)
   return (
-    <div className="card">
+    <div className="cardd">
   
-      <img className='img-bg' src={props?.img} alt='picture'/>
+      <img className='img-bgg' src={props?.img} alt='picture'/>
       <div className='location'>
       <CiLocationOn className='loc-icon' size={25}/>
         <p>{props?.location}</p>

@@ -7,8 +7,8 @@ function AdminHome() {
     
 
     <div className='btn-div'>
-    <button className='btn'>View User Queries</button>
-    <button className='btn'>Manage Packages</button>
+    <button className='btn-blue'>View User Queries</button>
+    <button className='btn-blue'>Manage Packages</button>
     </div>
     
    

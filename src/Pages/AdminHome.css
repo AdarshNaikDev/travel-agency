@@ -21,7 +21,7 @@
    
 }
 
-.btn {
+.btn-blue {
     width: 300px;
     margin-top: 20px;
     border: none;
@@ -38,6 +38,6 @@
 
 }
 
-.btn:hover{
+.btn-blue:hover{
     background-color: rgb(35, 140, 163); 
 }

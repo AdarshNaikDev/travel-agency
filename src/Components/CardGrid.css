@@ -1,5 +1,5 @@
 /* CardGrid.css */
-.card-grid {
+.cardd-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust card width as needed */
     gap: 20px; /* Adjust gap between cards */
@@ -7,7 +7,7 @@
     margin: 0 auto;
   }
   
-  .card {
+  .cardd {
     position: relative;
     background-color: #f5f5f5;
     padding: 20px;
@@ -17,7 +17,7 @@
     /* Add other card styles */
   }
 
-  .img-bg{
+  .img-bgg{
     position: absolute;
     object-fit: cover;
     width: 314.5px;
