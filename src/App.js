@@ -11,8 +11,7 @@ import AdminLogin from './Pages/AdminLogin';
 function App() {
   return (
     <>
-  
-  <Packages/>
+    <ViewSinglePackage/>
     </>
   );
 }

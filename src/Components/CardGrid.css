@@ -12,7 +12,7 @@
     background-color: #f5f5f5;
     padding: 20px;
     border-radius: 6px;
-    height: 347px;
+    height: 350px;
     box-shadow: 0px 4px 6px #4c4e50, 0px 0px 1px #5c5c5e
     /* Add other card styles */
   }
@@ -63,6 +63,21 @@
     position: absolute;
     top: 240px;
     left: 15px;
+  }
+
+  .night-day{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 260px;
+    left: 11px;
+  }
+
+  .enquire-btn{
+    position: absolute;
+    top: 305px;
+    left: 215px;
+    background-color: #179FBDFF;
   }
 
 

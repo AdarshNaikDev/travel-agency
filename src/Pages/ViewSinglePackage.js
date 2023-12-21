@@ -5,9 +5,11 @@ import LoginHeader from '../Components/LoginHeader'
 
 function ViewSinglePackage() {
   return (
-    
-    // header component
+    <>
+      <LoginHeader backButton = {true}/>
     <p>Hello</p>
+    </>
+  
   )
 }
 
