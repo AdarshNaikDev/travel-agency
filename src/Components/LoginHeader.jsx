@@ -8,7 +8,7 @@ function LoginHeader({backButton}) {
     <>
     <div className='logo-header'>
         <img className='travel-logo' src={travelLogo} alt="logo"/>
-        {backButton == true? <div className='d-flex align-items-center '>
+        {backButton === true? <div className='d-flex align-items-center '>
           <IoIosArrowBack className='pt-2  text-muted' size={25}/>
         <p className='pt-4 text-muted fw-bold'> Back to home</p>
         </div>: <></>}
