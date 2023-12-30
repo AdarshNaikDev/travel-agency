@@ -80,63 +80,61 @@ function ViewSinglePackage() {
           </div>
         </div>
 
-        <div className="form-cont" style={{ backgroundColor: "orange" }}>
+        <div className="form-cont" >
           <div className="form-card">
-            <h5>Starting from just ₹3799/- only</h5>
+            <h5 className="ms-5 pt-4">Starting from just ₹3799/- only</h5>
 
             <div className="input-fields">
-              <div className="full-name">
-                <p>Full Name</p>
-                <div>
-                  <input />
-                </div>
+              <div className="field-fullName">
+                <p className="text-muted fw-bold">Full Name</p>
+                  <input placeholder="Your Name" style={{overflow:'none', borderTop:'none',borderLeft:'none', borderRight:'none', borderBottom:'3px solid rgb(180, 180, 180)', width:'318px'}}/> 
               </div>
 
-              <div className="email-phone">
-                <div>
-                  <p>Email address</p>
-                  <div>
-                    <input/>
-                  </div>
+              <div className="email-phone d-flex ms-4 mt-4">
+                <div className="field-email">
+                <p className="text-muted fw-bold">Email address</p>
+                <input placeholder="Your Email address" style={{width:'150px' ,overflow:'none', borderTop:'none', borderRight:'none', borderLeft:'none', borderBottom:'3px solid rgb(180, 180, 180)',width:'140px'}}/>
                 </div>
-
-                <div>
-                  <p>Phone number</p>
-                  <div>
-                    <input/>
-                  </div>
+                <div className="field-phone">
+                <p className="text-muted fw-bold">Phone Number</p>
+                <input placeholder="Your Phone number" style={{width:'150px', overflow:'none', borderTop:'none', borderRight:'none',borderLeft:'none', borderBottom:'3px solid rgb(180, 180, 180)'}}/>
                 </div>
+                
               </div>
 
-              <div className="city-drop">
-                <p>
+              <div className="city-drop ms-4">
+                <p className="text-muted fw-bold">
                   City of Residence
                 </p>
                 <select>
                   <option>Select city</option>
+                  <option>Bengaluru</option>
                 </select>
               </div>
 
-              <div className="no-date">
-                <div>
-                <p>No of People</p>
-                <select>
+              <div className="no-date d-flex ms-4 mt-4 mb-2">
+                <div className="no-people">
+                <p className="text-muted fw-bold">No of People</p>
+                <select >
                   <option>
                     Select
+                  </option>
+                  <option>
+                    5
                   </option>
                 </select>
                 </div>
 
-                <div>
-                <p>Expected date of travel</p>
+                <div className="date-fieldd">
+                <p className="text-muted fw-bold ">Expected date of travel</p>
                <input type="date"/>
                 </div>
                 
               </div>
 
             </div>
-            <div className="input-fields">
-              <button>ENQUIRE</button>
+            <div className="btn-desc">
+              <button className="enq-btn fw-bold text-white">ENQUIRE</button>
               <p>You won't be charged yet</p>
             </div>
           </div>

@@ -21,21 +21,145 @@
 .grid-comp-left{
     display: flex;
     flex-direction: column;
+
 }
 
 .form-card{
     display: flex;
     flex-direction: column;
-    background-color: red;
-    width: 90%;
+
+    width: 100%;
     margin: 0 auto;
-    height: 400px;
+    height: 450px;
+    background: #FFFFFFFF;
+    border-radius: 8px;
+    box-shadow: 0px 8px 17px #414142, 0px 0px 2px #7b7b7c;
     
-    
- 
 }
 
-.form-cont{
+
+.field-fullName{
+    margin-left: 24px;
+    margin-top: 10px;
+}
+.field-fullName p{
+    margin-bottom: -1px;
     
 }
+
+.field-fullName input{
+    background: transparent;
+   
+}
+
+.field-fullName input:focus{
+    outline: none;
+    background: transparent;
+    
+}
+
+.field-phone{
+    margin-left: 25px;
+}
+.field-phone p{
+    margin-bottom: 1px;
+}
+.field-email p{
+    margin-bottom: 1px;
+}
+.field-phone input:focus{
+    outline: none;
+    background: transparent;
+}
+.field-email input:focus{
+    outline: none;
+    background: transparent;
+}
+
+.city-drop{
+    margin-top: 20px;
+
+}
+
+.city-drop select{
+    color: gray;
+    width: 90%;
+    outline: none;
+    background: transparent;
+    border-top: hidden;
+    border-right: hidden;
+    border-left: hidden;
+    border-radius: 0;
+    border-bottom: 3px rgb(180, 180, 180) solid;
+}
+
+.city-drop select:focus{
+    outline:none;
+    background: transparent;
+}
+
+.city-drop p{
+    margin-bottom: 1px;
+}
+
+.date-fieldd{
+    margin-left: 55px;
+}
+
+.no-people p{
+    margin-bottom: 2px;
+}
+.no-people select{
+    color: gray;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 3px solid rgb(180, 180, 180);
+    width: 100px;
+}
+
+.no-people select:focus{
+    outline: none;
+    background: transparent;
+}
+
+.date-fieldd input{
+    color: gray;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 3px solid rgb(180, 180, 180);
+    width: 150px;
+}
+
+.date-fieldd input:focus{
+    outline: none;
+    background: transparent;
+}
+
+.date-fieldd p{
+    margin-bottom: 1px;
+}
+
+.enq-btn{
+    margin-top: 27px;
+    margin-left: 15px;
+    background-color: #29C3E5FF;
+    padding: 10px;
+    outline: none;
+    border: none;
+    width: 350px;
+    border-radius: 6px;
+}
+
+.btn-desc p{
+    text-align: center;
+}
+
+
+
+
+
+
+
 
