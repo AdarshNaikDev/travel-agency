@@ -6,12 +6,14 @@ import Home from './Pages/Home'
 import Packages from './Pages/Packages';
 import ViewSinglePackage from './Pages/ViewSinglePackage';
 import AdminLogin from './Pages/AdminLogin';
+import UserQuery from './Pages/UserQuery';
+import AddDelPackages from './Pages/AddDelPackages';
 
 
 function App() {
   return (
     <>
-    <ViewSinglePackage/>
+    <AddDelPackages/>
     </>
   );
 }

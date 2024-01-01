@@ -1,9 +1,11 @@
 import React from "react";
 import LoginHeader from "../Components/LoginHeader";
 import { FaStar } from "react-icons/fa";
+import AccordionComponent from "../Components/AccordionComponent";
 import "./ViewSinglePackage.css";
 
 function ViewSinglePackage() {
+ 
   const bggImages = [
     {
       backgroundImage: `url('img1.png')`,
@@ -38,6 +40,30 @@ function ViewSinglePackage() {
       borderBottomRightRadius: "8px",
     },
   ];
+
+  const iterationData = [
+    {
+      "dayNumber": "Day1",
+      "Iteration": "Explore the city's landmarks and museums.",
+      "ID":1
+    },
+    {
+      "dayNumber": "Day2",
+      "Iteration": "Visit local markets and try traditional cuisine.",
+      "ID":2
+    },
+    {
+      "dayNumber": "Day3",
+      "Iteration": "Enjoy outdoor activities like hiking and sightseeing.",
+      "ID":3
+    },
+    {
+      "dayNumber": "Day4",
+      "Iteration": "Relax and unwind at a nearby beach or spa.",
+      "ID":4
+    }
+  ]
+
   return (
     <>
       <LoginHeader backButton={true} />
@@ -61,6 +87,7 @@ function ViewSinglePackage() {
       {/* grid Component which contains form description and accordion*/}
       <div className="grid-comp">
         <div className="grid-comp-left">
+          {/* Description area starts */}
           <div className="small-desc text-muted">
             <h3 className="text-black">Coastal Karnataka Tour Overview</h3>
             <p className="ps-1">
@@ -72,14 +99,28 @@ function ViewSinglePackage() {
             </p>
             <hr style={{ marginTop: "3px" }} />
           </div>
-          <div
-            className="accordion-comp"
-            style={{ backgroundColor: "lightblue" }}
-          >
-            accordion design
-          </div>
+          {/* Description area ends */}
+          {/* Accordion area starts */}
+
+          {
+            iterationData.map((item, ind) => {
+
+              return (
+                
+                  <AccordionComponent key={ind} dayData={item.dayNumber} dayContent={item.Iteration} ind = {item.ID}/>
+               
+              )
+            })
+          }
+
+
+
+
+
+          {/* Accordion area ends */}
         </div>
 
+        {/* Grid right side form-area starts */}
         <div className="form-cont" >
           <div className="form-card">
             <h5 className="ms-5 pt-4">Starting from just ₹3799/- only</h5>
@@ -87,19 +128,19 @@ function ViewSinglePackage() {
             <div className="input-fields">
               <div className="field-fullName">
                 <p className="text-muted fw-bold">Full Name</p>
-                  <input placeholder="Your Name" style={{overflow:'none', borderTop:'none',borderLeft:'none', borderRight:'none', borderBottom:'3px solid rgb(180, 180, 180)', width:'318px'}}/> 
+                <input placeholder="Your Name" style={{ overflow: 'none', borderTop: 'none', borderLeft: 'none', borderRight: 'none', borderBottom: '3px solid rgb(180, 180, 180)', width: '318px' }} />
               </div>
 
               <div className="email-phone d-flex ms-4 mt-4">
                 <div className="field-email">
-                <p className="text-muted fw-bold">Email address</p>
-                <input placeholder="Your Email address" style={{width:'150px' ,overflow:'none', borderTop:'none', borderRight:'none', borderLeft:'none', borderBottom:'3px solid rgb(180, 180, 180)',width:'140px'}}/>
+                  <p className="text-muted fw-bold">Email address</p>
+                  <input placeholder="Your Email address" style={{ width: '150px', overflow: 'none', borderTop: 'none', borderRight: 'none', borderLeft: 'none', borderBottom: '3px solid rgb(180, 180, 180)', width: '140px' }} />
                 </div>
                 <div className="field-phone">
-                <p className="text-muted fw-bold">Phone Number</p>
-                <input placeholder="Your Phone number" style={{width:'150px', overflow:'none', borderTop:'none', borderRight:'none',borderLeft:'none', borderBottom:'3px solid rgb(180, 180, 180)'}}/>
+                  <p className="text-muted fw-bold">Phone Number</p>
+                  <input placeholder="Your Phone number" style={{ width: '150px', overflow: 'none', borderTop: 'none', borderRight: 'none', borderLeft: 'none', borderBottom: '3px solid rgb(180, 180, 180)' }} />
                 </div>
-                
+
               </div>
 
               <div className="city-drop ms-4">
@@ -114,22 +155,22 @@ function ViewSinglePackage() {
 
               <div className="no-date d-flex ms-4 mt-4 mb-2">
                 <div className="no-people">
-                <p className="text-muted fw-bold">No of People</p>
-                <select >
-                  <option>
-                    Select
-                  </option>
-                  <option>
-                    5
-                  </option>
-                </select>
+                  <p className="text-muted fw-bold">No of People</p>
+                  <select >
+                    <option>
+                      Select
+                    </option>
+                    <option>
+                      5
+                    </option>
+                  </select>
                 </div>
 
                 <div className="date-fieldd">
-                <p className="text-muted fw-bold ">Expected date of travel</p>
-               <input type="date"/>
+                  <p className="text-muted fw-bold ">Expected date of travel</p>
+                  <input type="date" />
                 </div>
-                
+
               </div>
 
             </div>
@@ -139,6 +180,7 @@ function ViewSinglePackage() {
             </div>
           </div>
         </div>
+        {/* form area ends */}
       </div>
     </>
   );
