@@ -147,3 +147,16 @@ padding-left: 10px;
     display: none;
   }
   
+.link-nav{
+    color: gray;
+    text-decoration: none;
+}
+
+.link-nav:hover{
+    color: black;
+    
+}
+
+.active{
+    color: black;
+}

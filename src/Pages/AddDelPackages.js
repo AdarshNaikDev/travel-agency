@@ -10,7 +10,7 @@ function AddDelPackages() {
     
   return (
    <>
-   <LoginHeader/>
+   <LoginHeader backButton={true} />
    <div className='pkg-head'>
         <h3 className='titlee'>Our Packages</h3>
         <button className='btn-add text-white fw-bold'>Add new Package</button>

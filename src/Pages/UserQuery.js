@@ -14,7 +14,7 @@ function UserQuery() {
   
     return (
         <React.Fragment>
-            <LoginHeader />
+            <LoginHeader backButton={true} />
             <div>
                 <h3 className='titlee'>User Queries List</h3>
             </div>

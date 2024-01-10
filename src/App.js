@@ -8,12 +8,25 @@ import ViewSinglePackage from './Pages/ViewSinglePackage';
 import AdminLogin from './Pages/AdminLogin';
 import UserQuery from './Pages/UserQuery';
 import AddDelPackages from './Pages/AddDelPackages';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 
 
 function App() {
   return (
     <>
-    <AddDelPackages/>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Home/>}/>
+      <Route path="/Login" element={<AdminLogin/>}/>
+      <Route path="/Packages" element = {<Packages/>} />
+      <Route path="/AdminHome" element={<AdminHome/>}/>
+      <Route path="/TourPackage" element={<ViewSinglePackage/>}/>
+      <Route path="/UserList" element={<UserQuery/>}/>
+      <Route path ="/ManagePackage" element={<AddDelPackages/>}/>
+    </Routes>
+    </BrowserRouter>
+   
     </>
   );
 }

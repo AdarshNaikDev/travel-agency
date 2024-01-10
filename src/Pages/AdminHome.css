@@ -1,4 +1,4 @@
-.background-img-container{
+.backgroundd-img-container{
     background-image: url('/public/adminHome.png');
     /* background-color: aquamarine; */
     width: 100%;
@@ -11,7 +11,7 @@
 
 }
 
-.btn-div{
+.btnn-div{
     width: 100%;
     height: 645px;
     display: flex;

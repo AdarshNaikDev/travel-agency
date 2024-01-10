@@ -4,6 +4,7 @@ import travelLogo from '../../src/Assets/logo.png';
 import { FiPhoneCall } from "react-icons/fi";
 import { MdMenuOpen } from "react-icons/md";
 import {AiOutlineClose} from "react-icons/ai";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
 
@@ -18,10 +19,17 @@ const Navbar = () => {
                 </div>
                 <div className="top-center">
                     <ul className="navigation-items">
-                        <li>Home</li>
-                        <li>Packages</li>
-                        <li>About Us</li>
-                        <li>Contact Us</li>
+                        <li>
+                            <NavLink className="link-nav" to={"/"}>
+                            Home
+                            </NavLink>
+                            </li>
+                        <li><NavLink className="link-nav" to={"/Packages"}>
+                        Packages
+                        </NavLink>
+                        </li>
+                        <li className="link-nav">About Us</li>
+                        <li className="link-nav">Contact Us</li>
                     </ul>
                 </div>
                 <div className="top-right">
