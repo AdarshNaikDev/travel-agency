@@ -15,6 +15,7 @@
     flex-direction: column;
     width: 61%;
     margin: 0 auto;
+    margin-bottom: 40px;
 }
 
 .col-divide{
@@ -29,7 +30,7 @@
 }
 
 .col-divide-right div{
-    margin-right: 140px;
+    margin-right: 40px;
     margin-bottom: 10px;
 }
 .pkg-title{
@@ -57,4 +58,72 @@
     margin: 0 auto;
     height: 200px;
     margin-bottom: 20px;
+}
+
+.col-divide label{
+    color: rgb(99, 97, 97);
+    font-weight: 800;
+}
+
+.tour-over textarea{
+    color: rgb(99, 97, 97);
+    font-weight: 800;
+}
+
+.col-divide input{
+    background-color: lightgray;
+    outline: none;
+    border: none;
+    padding: 2px 150px 8px 2px;
+
+}
+
+.col-divide select{
+    background-color: lightgray;
+    outline: none;
+    border: none;
+    padding: 2px 150px 8px 2px;
+
+}
+
+.tour-over textarea{
+    background-color: lightgray;
+    outline: none;
+    border: none;
+   
+
+}
+
+.media-text{
+    display: flex;
+    align-items: center;
+    
+}
+
+.small-txt{
+    padding-left: 10px;
+    padding-top: 17px;
+    color: rgb(99, 97, 97);
+}
+
+.img-cardd{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-bottom: 20px;
+    
+}
+
+.img-cardd div{
+    height: 150px;
+    width: 150px;
+    background-color: #aeb1b6;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.img-cardd input::file-selector-button
+{
+    color: red;
 }

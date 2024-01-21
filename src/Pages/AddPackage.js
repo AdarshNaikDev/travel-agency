@@ -17,6 +17,7 @@ const AddPackage = ()=>{
             </p>
         </div>
 
+        {/* form box starts */}
         <div className="form-travel-pkg">
             <h4 className="small-header fw-bold" >Travel package information</h4>
             <div className="col-divide">
@@ -80,8 +81,38 @@ const AddPackage = ()=>{
                 <label>
                     Tour Overview
                 </label>
-                <textarea type="text" />
+                <textarea  style={{resize:'none'}} type="text" />
             </div>
+        </div>
+
+        {/* form box ends */}
+
+        {/* image upload box starts */}
+        <div className="form-travel-pkg">
+            <div className="media-text">
+            <h4 className="small-header fw-bold" >Media</h4><span className="small-txt">(PNG, Jpeg, JPG, Tiff) please upload 4 best images about this package</span>
+            </div>  
+            
+            {/* div should contain 5 boxes */}
+            <div className="img-cardd">
+                <div>
+                    Image1
+                </div>
+                <div>
+                    Image2
+                </div>
+                <div>
+                    Image4
+                </div>
+                <div>
+                    Image4
+                </div>
+                <div>
+                    <input className="file-upload" type="file" />
+                   Add Image
+                </div>
+            </div>
+
         </div>
         </>
     )
