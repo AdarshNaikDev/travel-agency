@@ -17,7 +17,7 @@ function App() {
   return (
     <>
     <BrowserRouter>
-    {/* <Routes>
+    <Routes>
       <Route path="/" element={<Home/>}/>
       <Route path="/Login" element={<AdminLogin/>}/>
       <Route path="/Packages" element = {<Packages/>} />
@@ -25,8 +25,9 @@ function App() {
       <Route path="/TourPackage" element={<ViewSinglePackage/>}/>
       <Route path="/UserList" element={<UserQuery/>}/>
       <Route path ="/ManagePackage" element={<AddDelPackages/>}/>
-    </Routes> */}
-    <AddPackage/>
+      <Route path = "/addPackage" element= {<AddPackage/>}/>
+    </Routes>
+   
     </BrowserRouter>
    
     </>
