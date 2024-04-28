@@ -3,7 +3,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust card width as needed */
     gap: 20px; /* Adjust gap between cards */
-    width: 88%;
+    width: 87%;
     margin: 0 auto;
   }
   
@@ -30,7 +30,7 @@
 
   .location{
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     position: absolute;
     top: 170px;
     left: 8px;
@@ -40,6 +40,7 @@
   .location p{
     margin-left: 5px;
     font-weight: 700;
+    padding-top: 15px;
   }
 
   .location svg{
@@ -50,18 +51,19 @@
   .loc-icon{
     font-weight: 800;
     color: rgb(48, 216, 48);
-    font-size: x-large;    
+    font-size: x-large;
+    margin-top: 15px;    
   }
 
   .actual-price{
     position: absolute;
-    top: 210px;
+    top: 235px;
     left: 15px;
   }
 
   .discount-price{
     position: absolute;
-    top: 240px;
+    top: 260px;
     left: 15px;
   }
 
@@ -69,7 +71,7 @@
     position: absolute;
     display: flex;
     align-items: center;
-    top: 260px;
+    top: 282px;
     left: 11px;
   }
 
