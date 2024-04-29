@@ -10,13 +10,15 @@ import UserQuery from './Pages/UserQuery';
 import AddDelPackages from './Pages/AddDelPackages';
 import AddPackage from './Pages/AddPackage';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-
+import store from './Store/store';
+import {Provider} from 'react-redux';
 
 
 function App() {
   
   return (
     <>
+    <Provider store = {store}>
     <BrowserRouter>
     <Routes>
       <Route path="/" element={<Home/>}/>
@@ -30,6 +32,8 @@ function App() {
     </Routes>
    
     </BrowserRouter>
+    </Provider>
+    
    
     </>
   );

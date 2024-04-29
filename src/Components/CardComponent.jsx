@@ -3,6 +3,11 @@ import './CardGrid.css';
 import { CiLocationOn } from "react-icons/ci";
 import { IoMdTime } from "react-icons/io";
 const CardComponent = (props) => {
+
+  function getPackageId(pkgId)
+  {
+    console.log(pkgId)
+  }
   
   return (
     <div className="cardd">
@@ -22,7 +27,7 @@ const CardComponent = (props) => {
         <IoMdTime size={20}/>
         <p className='pt-3 ms-1'><span className='fw-bold'>{props.day}</span> Days <span className='fw-bold'>{props.night}</span> Nights</p>
       </div>
-      <button type="button" className="enquire-btn btn btn-primary ">Enquire</button>
+      <button type="button" className="enquire-btn btn btn-primary " onClick={()=>getPackageId(props.pkgId)}>Enquire</button>
     </div>
   );
 };

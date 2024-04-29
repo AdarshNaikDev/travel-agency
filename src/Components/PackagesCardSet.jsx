@@ -3,11 +3,14 @@ import './CardGrid.css'
 
 import CardComponent from './CardComponent';
 import UseFetchData from '../Hooks/UseFetchData';
+import { useDispatch} from 'react-redux';
 import axios from 'axios'
+import { add } from '../Store/travelPkgsSlice';
 
 function PackagesCardSet() {
   const {items,loading,error}= UseFetchData("TourPackage/g/getPackages")
-  
+  const dispatch = useDispatch();
+  dispatch(add(items));
  
   //const urll = process.env.REACT_APP_BASE_URL+"TourPackage/g/getPackages";
   // useEffect(()=>{
@@ -36,7 +39,7 @@ function PackagesCardSet() {
     <>
     <div style={{marginTop:"40px", marginBottom:"20px"}} className='cardd-grid'>
     {items?.map((card) => (
-        <CardComponent key={card._id} day={card.noOfDays} night={card.noOfNights} location = {card.title} img={card?.pkgImages[0]?.img1} originalPrice={card.actualPrice} discountPrice={card.discountedPrice} />
+        <CardComponent key={card._id} pkgId={card._id} day={card.noOfDays} night={card.noOfNights} location = {card.title} img={card?.pkgImages[0]?.img1} originalPrice={card.actualPrice} discountPrice={card.discountedPrice} />
       ))}
     </div>
     </>
