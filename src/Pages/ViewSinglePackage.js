@@ -1,45 +1,60 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import LoginHeader from "../Components/LoginHeader";
 import { FaStar } from "react-icons/fa";
 import AccordionComponent from "../Components/AccordionComponent";
 import "./ViewSinglePackage.css";
+import {useLocation} from 'react-router-dom'
+import {useSelector, useDispatch} from 'react-redux'
+import UseFetchData from "../Hooks/UseFetchData";
+import { add } from "../Store/travelPkgsSlice";
 
 function ViewSinglePackage() {
+  let singlePkg = new Array();
+  const allTravelPkgs = useSelector((state) => state.travelPkgs);
+  const [singlePackageData, setSinglePackageData] = useState(null);
+  const [bgImagesArr, setBgImages] = useState(null);
+ const location = useLocation();
+ const pkgId = location?.state?.packageId;
+
+
+ const {items,loading,error}= UseFetchData("TourPackage/g/getPackages")
+  const dispatch = useDispatch();
+  
+  
+  useEffect(() => {
+  console.log("ITems", items)
+    if(items.length > 0)
+    {
+      items.forEach((item)=>{
+      dispatch(add(item))
+      })
+    }
+    else{
+      console.log("control has reached here")
+    }
+  }, [items]);
+
+ function getPkgOnId(pkgId, allTravelPkgs) {
+  return allTravelPkgs.find((item) => item._id === pkgId);
+}
+
  
-  const bggImages = [
-    {
-      backgroundImage: `url('img1.png')`,
-      backgroundSize: "cover",
-      backgroundPosition: "center",
-      gridRowStart: 1,
-      gridRowEnd: 4,
-      gridColumnStart: 1,
-      gridColumnEnd: 4,
-      borderTopLeftRadius: "8px",
-      borderBottomLeftRadius: "8px",
-    },
-    {
-      backgroundImage: `url('img2.png')`,
-      backgroundSize: "cover",
-      backgroundPosition: "center",
-      borderTopRightRadius: "8px",
-      borderBottomRightRadius: "8px",
-    },
-    {
-      backgroundImage: `url('img3.png')`,
-      backgroundSize: "cover",
-      backgroundPosition: "center",
-      borderTopRightRadius: "8px",
-      borderBottomBottomRadius: "8px",
-    },
-    {
-      backgroundImage: `url('img4.png')`,
-      backgroundSize: "cover",
-      backgroundPosition: "center",
-      borderTopRightRadius: "8px",
-      borderBottomRightRadius: "8px",
-    },
-  ];
+ useEffect(()=>{
+  //console.log(pkgId);
+  //console.log(allTravelPkgs);
+if(pkgId && allTravelPkgs )
+{
+  singlePkg = getPkgOnId(pkgId,allTravelPkgs);
+  console.log("Single package image",singlePkg)
+  
+  setSinglePackageData(singlePkg)
+}
+ 
+ },[pkgId, allTravelPkgs])
+
+
+
+
 
   const iterationData = [
     {
@@ -69,7 +84,7 @@ function ViewSinglePackage() {
       <LoginHeader backButton={true} />
 
       <div className="ms-5 mt-4 ">
-        <h3 className="mt-2 ms-5">Coastal Karnataka Tour</h3>
+        <h3 className="mt-2 ms-5">{singlePackageData && singlePackageData.title}</h3>
         <div className="d-flex ms-5 ps-2">
           <FaStar color="#7BD3EA" size={25} />
           <p className="ms-2 text-muted">South India</p>
@@ -78,10 +93,21 @@ function ViewSinglePackage() {
 
       {/* 4 image collage starts */}
       <div className="image-parent">
-        <div style={bggImages[0]}></div>
-        <div style={bggImages[1]}></div>
-        <div style={bggImages[2]}></div>
-        <div style={bggImages[3]}></div>
+        <div >
+      <img className="image-adjuster" src={singlePackageData && singlePackageData?.pkgImages[0]?.img1} />
+        </div>
+        <div >
+        <img className="image-adjuster" src={singlePackageData && singlePackageData?.pkgImages[1]?.img2} />
+      
+        </div>
+        <div >
+        <img className="image-adjuster" src={singlePackageData && singlePackageData?.pkgImages[2]?.img3} />
+      
+        </div>
+        <div >
+        <img className="image-adjuster" src={singlePackageData && singlePackageData?.pkgImages[3]?.img4} />
+      
+        </div>
       </div>
 
       {/* grid Component which contains form description and accordion*/}

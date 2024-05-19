@@ -8,7 +8,14 @@ const travelPkgsSlice = createSlice({
     initialState,
     reducers: {
         add(state, action){
-            state.push(action.payload);
+            const res = state.some((payload)=> {
+                return payload._id == action.payload._id;
+            })
+            if(!res)
+            {
+                state.push(action.payload);
+            }
+            
         },
         remove(state, action){
             state = state.filter((item)=> item._id !== action.paylod)

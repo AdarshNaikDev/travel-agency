@@ -2,11 +2,15 @@ import React from 'react';
 import './CardGrid.css';
 import { CiLocationOn } from "react-icons/ci";
 import { IoMdTime } from "react-icons/io";
+import { useNavigate } from 'react-router-dom';
 const CardComponent = (props) => {
+
+  const navigate = useNavigate();
 
   function getPackageId(pkgId)
   {
-    console.log(pkgId)
+    
+    navigate('/TourPackage', {state: {packageId : pkgId}})
   }
   
   return (
