@@ -41,3 +41,16 @@
 .btn-blue:hover{
     background-color: rgb(35, 140, 163); 
 }
+
+.user-heading{
+    display: flex;
+    
+    flex-direction: row;
+    justify-content: end;
+    padding-top: 20px;
+    padding-right: 20px;
+}
+
+.user-heading span{
+    color: #179FBDFF;
+}
