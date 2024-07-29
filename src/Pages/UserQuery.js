@@ -12,6 +12,7 @@ function UserQuery() {
         {userName:"Lavanya", cityOfResidence: "Shimoga", emailAddress:"lavanya@gmail.com", phoneNumber: "+91 9876789876", dreamDestination: "Singapore", noOfPeople: "1", dateOfTravel: "21/01/2024"}
     ]
   
+
     return (
         <React.Fragment>
             <LoginHeader backButton={true} />
@@ -20,9 +21,9 @@ function UserQuery() {
             </div>
 
             {/* table starts */}
-            <div class="container" style={{ marginLeft:'40px' }}>
+            <div className="container" style={{ marginLeft:'40px' }}>
 
-                <table class="rwd-table">
+                <table className="rwd-table">
                     <tbody>
                         <tr>
                             <th>Serial no</th>

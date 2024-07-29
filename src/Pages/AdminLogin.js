@@ -5,11 +5,15 @@ import Login from '../Hooks/LoginAPI';
 import { toast, ToastContainer } from 'react-toastify';
 //import "react-toastify/dist/ReactToastify.css";
 import ErrorToast from '../Hooks/ErrorToast';
+import { useDispatch} from 'react-redux';
+import {addUser} from  '../Store/UserLoginSlice';
 
 import {useNavigate} from 'react-router-dom';
 
 function AdminLogin() {
   const [userCred, setUserCred] = useState({ userName: '', password: '' })
+
+  const dispatch = useDispatch();
 
   const navigate = useNavigate();
 
@@ -32,17 +36,23 @@ function AdminLogin() {
       else{
         
         const res = await Login(userCred)
-       
+       console.log("Result ", res)
         if(res.status === 200)
         {
-          console.log(res.data.email)
+          console.log(res.data.userName)
           //dispatch the redux slice
+          const obj = {
+            IsLoggedIn : true,
+            userName : res?.data?.userName
+          }
+          dispatch(addUser(obj))
+          navigate('/AdminHome')
         }
-        if(res === "Invalid username or password!")
+        if(res === "Invalid username or password!" || res ==="Invalid Credentials")
         {
           ErrorToast("Invalid Username/Password", "top-center");
         }
-        //navigate('/AdminHome')
+        
       }
     
     

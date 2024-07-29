@@ -11,6 +11,7 @@ const travelPkgsSlice = createSlice({
             const res = state.some((payload)=> {
                 return payload._id == action.payload._id;
             })
+            console.log("Res from slice", res)
             if(!res)
             {
                 state.push(action.payload);

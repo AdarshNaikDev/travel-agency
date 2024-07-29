@@ -12,6 +12,7 @@ import AddPackage from './Pages/AddPackage';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import store from './Store/store';
 import {Provider} from 'react-redux';
+import ProtectedRoutes from './Utils/ProtectedRoutes';
 
 
 function App() {
@@ -24,11 +25,12 @@ function App() {
       <Route path="/" element={<Home/>}/>
       <Route path="/Login" element={<AdminLogin/>}/>
       <Route path="/Packages" element = {<Packages/>} />
-      <Route path="/AdminHome" element={<AdminHome/>}/>
+      {/* <Route path="/AdminHome" element={<AdminHome/>}/> */}
+      <Route path="/AdminHome" element={<ProtectedRoutes ComponentName = {AdminHome} />}/>
       <Route path="/TourPackage" element={<ViewSinglePackage/>}/>
-      <Route path="/UserList" element={<UserQuery/>}/>
-      <Route path ="/ManagePackage" element={<AddDelPackages/>}/>
-      <Route path = "/addPackage" element= {<AddPackage/>}/>
+      <Route path="/UserList" element={<ProtectedRoutes ComponentName={UserQuery} />}/>
+      <Route path ="/ManagePackage" element={<ProtectedRoutes ComponentName={AddDelPackages} />}/>
+      <Route path = "/addPackage" element= {<ProtectedRoutes ComponentName={AddPackage} />}/>
     </Routes>
    
     </BrowserRouter>
