@@ -30,7 +30,8 @@ function App() {
       <Route path="/TourPackage" element={<ViewSinglePackage/>}/>
       <Route path="/UserList" element={<ProtectedRoutes ComponentName={UserQuery} />}/>
       <Route path ="/ManagePackage" element={<ProtectedRoutes ComponentName={AddDelPackages} />}/>
-      <Route path = "/addPackage" element= {<ProtectedRoutes ComponentName={AddPackage} />}/>
+      {/* <Route path = "/addPackage" element= {<ProtectedRoutes ComponentName={AddPackage} />}/> */}
+      <Route path = "/addPackage" element= {<AddPackage/>}/>
     </Routes>
    
     </BrowserRouter>

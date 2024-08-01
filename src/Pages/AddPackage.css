@@ -204,5 +204,24 @@
     background-color: #29C3E5FF;
   }
 
+  /* Chrome, Safari, Edge, Opera */
+.number-input::-webkit-outer-spin-button,
+.number-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.number-input {
+  -moz-appearance: textfield;
+}
+
+/* General styling */
+.number-input {
+  appearance: textfield;
+}
+
+ 
+  
 
   
